@@ -41,10 +41,17 @@
 ## Part D2: Debug the Code (Bug 1 - Bug 8)
 
 * **Bug 1 (CORS):** Backend restricted to port 5173 while Vite runs on 5174. Fix: Use dynamic CORS or `app.use(cors())`.
+
 * **Bug 2 (Headers Sent):** Missing `return` after error response. Fix: `return res.status(400).json(...)`.
+
 * **Bug 3 (State Mutation):** Using `.splice()`. Fix: Use `.filter()` to return a new array instance.
+
 * **Bug 4 (Infinite Loop):** Missing dependency array in `useEffect`. Fix: Add `[]` as the second argument.
+
 * **Bug 5 (Type Mismatch):** Comparing string `req.params.id` with numeric ID. Fix: `parseInt(req.params.id, 10)`.
+
 * **Bug 6 (Fetch Body):** Sending raw object without stringifying. Fix: `body: JSON.stringify(data)`.
+
 * **Bug 7 (Hardcoded URL):** Using `http://localhost:5000` in production. Fix: Use `import.meta.env.VITE_API_URL`.
+
 * **Bug 8 (Secret Leak):** Missing `.gitignore`. Fix: Add `.env` and `node_modules/` to `.gitignore`.

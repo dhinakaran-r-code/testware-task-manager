@@ -11,8 +11,9 @@ app.use(express.json());
 
 // In-memory data store
 let tasks = [
-  { id: 1, title: "Learn Git", done: false },
-  { id: 2, title: "Build the API", done: true }
+  { id: 1, title: "Java", done: false },
+  { id: 2, title: "C++", done: true },
+  { id: 3, title: "Python", done: false }
 ];
 let nextId = 3;
 
